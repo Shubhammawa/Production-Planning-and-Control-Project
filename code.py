@@ -10,8 +10,9 @@ series = pd.read_csv("IPG2211A2N.csv").values
 value = series[:,1]
 #sns.lineplot(value)
 #plt.show(value)
-#value = 1 + np.log(value)
-print(value)
+print(type(value[0]))
+#value = np.log(value)
+#print(value)
 
 model = ARIMA(value, order=(2,1,0))
 model_fit = model.fit(disp=0)
